@@ -4,341 +4,285 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfólio de Rodrigo Bezerra.">
+    <meta name="description" content="Rodrigo Bezerra — Tech Lead & Senior Fullstack Engineer. Arquitetura backend, liderança técnica e produtos full-stack de ponta a ponta.">
     <meta name="author" content="Rodrigo V Bezerra">
-    <title>Rodrigo Bezerra</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Steller main styles -->
-    <link rel="stylesheet" href="assets/css/steller.css">
-    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo-rb-max-no-title-remove-bg.png">
+    <title>rodrigo.rb — Tech Lead &amp; Senior Fullstack Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="icon" type="image/png" href="./assets/imgs/logo-rb-max-no-title-remove-bg.png">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body id="home">
 
-    <!-- Page navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logo-rb-max-rno-bg.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre mim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#service">Projetos</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contato</a>
-                    </li> -->
-                </ul>
-            </div>
+    <!-- Nav: styled like an editor window's tab bar -->
+    <nav class="nav" id="nav">
+        <div class="nav-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="breadcrumb">~/<strong>rodrigo</strong></span>
         </div>
+        <div class="nav-tabs" id="navTabs">
+            <a href="#home" class="active">rodrigo.rb</a>
+            <a href="#about">about.md</a>
+            <a href="#experience">experience.log</a>
+            <a href="#stack">stack.json</a>
+            <span class="spacer"></span>
+            <a class="run" href="#contact">$ contact.sh</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
     </nav>
-    <!-- End of page navibation -->
 
-    <!-- Page Header -->
-    <header class="header" id="home">
+    <!-- Hero -->
+    <header class="hero">
         <div class="container">
-            <div class="infos">
-                <h6 class="subtitle">Olá, eu sou o</h6>
-                <h6 class="title">Rodrigo Bezerra</h6>
-                <p>Desenvolvedor de software</p>
+            <div class="hero-prompt">
+                <span class="user">rodrigo@dev</span>:<span class="path">~</span><span class="cmd">$ cat rodrigo.rb</span>
+            </div>
 
-                <div class="buttons pt-3">
-                  <a class="btn btn-primary rounded" href="https://api.whatsapp.com/send/?phone=5511954799830&text=Olá%2C+Rodrigo%21+Vim+pelo+seu+portfólio.&type=phone_number&app_absent=0">Entre em contato!</a>
+            <div class="hero-grid reveal">
+                <div class="editor">
+                    <div class="editor-bar">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <span class="filename">rodrigo.rb</span>
+                    </div>
+                    <div class="editor-body">
+                        <div class="editor-gutter">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                        <pre class="editor-code" id="typedCode"></pre>
+                    </div>
                 </div>
-                
 
-                <div class="socials mt-4">
-                    <a class="social-item" href="https://www.instagram.com/rodrigosuco/"><i class="ti-instagram"></i></a>
-                    <a class="social-item" href="https://github.com/pes4delo"><i class="ti-github"></i></a>
-                    <a class="social-item" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/"><i class="ti-linkedin"></i></a>
+                <div class="hero-side">
+                    <div class="tab">avatar.jpg</div>
+                    <img src="assets/imgs/avatar.jpg" alt="Rodrigo Bezerra">
+                    <div class="caption"><span>Brasil 🇧🇷</span><span class="status">● online</span></div>
                 </div>
             </div>
-            <div class="img-holder">
-                <img src="assets/imgs/engenharia-de-software.png" alt="" id="engsft">
-            </div>
-        </div>
 
-        <!-- Header-widget -->
-        <div class="widget">
-            <div class="widget-item">
-                <h2>5</h2>
-                <p>Projetos em produção</p>
+            <div class="hero-below reveal">
+                <p class="lede">Tech Lead e Senior Fullstack Engineer. Arquiteto sistemas de pagamento e e-commerce de alta escala, lidero um time de engenharia e hoje respondo por dezenas de projetos em produção.</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=5511954799830&text=Ol%C3%A1%2C+Rodrigo%21+Vim+pelo+seu+portf%C3%B3lio.&type=phone_number&app_absent=0" target="_blank" rel="noopener">$ ./contato.sh</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/" target="_blank" rel="noopener">open linkedin.com/in/rodrigo</a>
+                </div>
+
+                <div class="socials-row">
+                    <span class="label">$ ls ./redes</span>
+                    <div class="socials">
+                        <a class="social-item" href="https://github.com/rodrigosuco" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+                        </a>
+                        <a class="social-item" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.48v6.26ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+                        </a>
+                        <a class="social-item" href="https://instagram.com/rodrigosuco" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.9C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.3.79.72 1.47 1.39 2.13.66.67 1.34 1.08 2.13 1.39.76.3 1.63.5 2.9.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.9.06-1.29.07-1.7.07-4.96s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="widget-item">
-                <h2>2</h2>
-                <p>Projetos em desenvolvimento</p>
+
+            <div class="status-block reveal">
+                <div class="terminal">
+                    <div class="terminal-bar">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <span class="filename">zsh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="line"><span class="prompt">rodrigo@dev</span>:<span class="prompt-path">~</span><span class="prompt-cmd">$ status --produção</span></p>
+                        <div class="terminal-out">
+                            <div class="row"><span class="key">uptime</span><span class="val hl">99.99%</span></div>
+                            <div class="row"><span class="key">throughput</span><span class="val">milhões de requisições/min</span></div>
+                            <div class="row"><span class="key">projetos</span><span class="val">dezenas sob minha responsabilidade</span></div>
+                            <div class="row"><span class="key">time</span><span class="val">liderança técnica cross-funcional</span></div>
+                            <div class="row"><span class="key">stack</span><span class="val">rails · go · react · kotlin · swift</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <!-- End of Page Header -->
 
-    <!-- About section -->
-    <section id="about" class="section mt-3">
-        <div class="container mt-5">
-            <div class="row text-center text-md-left">
-                <div class="col-md-3">
-                    <img src="assets/imgs/avatar.jpg" alt="" class="img-thumbnail mb-4">
-                </div>
-                <div class="pl-md-4 col-md-9">
-                    <h6 class="title">Rodrigo Bezerra</h6>
-                    <p class="subtitle">Desenvolvedor de software</p>
-                    <p>Sou um desenvolvedor de software com experiência em Ruby, minha especialidade, com atuação em desenvolvimento web com Rails e mobile utilizando React Native. Também tenho experiência utilizando MySQL e PostgreSQL como banco de dados, além de Node.js para desenvolvimento de APIs e de chatbots. Possuo experiência em automações, operações matemáticas e manipulação de dados com Python, além de apps desktop com C#, VBA e MS Access.
-
-                      Sou fluente em inglês, o que me permite trabalhar em equipes globais e interagir com clientes internacionais. Tenho experiência e conhecimento em diversas normas de qualidade, como ISO 9001, 14001 e 45001, além de segurança da informação com ISO 27001 e 27017.</p>
-                    <a class="btn btn-primary rounded mt-3" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/">Meu
-                        Linkedin</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service section -->
-    <section id="service" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Projetos</h6>
-            <h6 class="section-title mb-4">Dedico-me a</h6>
-            <p class="mb-5 pb-4">Desenvolvimento de soluções tecnologicas multiplataforma, games, esportes e velocidade!</p>
-
-            <div class="row">
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-split-v-alt"></i>
-                            <h5>Coding</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-game"></i>
-                            <h5>Games</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-basketball"></i>
-                            <h5>Esportes</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                  <div class="custom-card card border">
-                      <div class="card-body">
-                          <i class="icon ti-car"></i>
-                          <h5>Motor Sports</h5>
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Section -->
-
-    <!-- Skills section -->
-    <!-- End of Skills sections -->
-
-    <!-- Portfolio section -->
-    <section id="portfolio" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Navegue por meus maiores projetos.</h6>
-            <p class="mb-5 pb-4">
-                Em meu portfólio, há uma variedade de projetos que demonstro meus conhecimentos. Alguns dos projetos
-              não poderei divulgar o código fonte públicamente, mas entre em contato para saber mais detalhes sobre o seu desenvolvimento.</p>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Counter-Strike Nades</h5>
-                                <h7>App mobile.<br>Pro-nades tem o objetivo de ajudar jogadores de CS:GO com tips and tricks de granadas.</h7>
-                                <br>
-                                <br>
-                                <a href="https://github.com/pes4delo/pro-nades"><i class="ti-link"></i></a>
-                                <hr>
-                                <h7 style="color: rgb(42, 48, 2);" >App desenvolvido em React Native + JS + SQLite.</h7>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                              <h5>Vortex Parties</h5>
-                              <h7>App mobile e web. <br> Rede social com o intuito de conectar jovens as melhores festas e eventos, baseado em sua localização.</h7>
-                                <br>
-                                <br>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                                <hr>
-                                <h7 style="color: rgb(42, 48, 2);" >App desenvolvido em React Native + JS + SQLite.
-                                  Backend em Node.js + Ruby on Rails API + PostgreSQL</h7>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img id="site1" src="assets/imgs/folio-4.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                              <h5>CB Seguros Management System</h5>
-                              <h7>App web.<br>Sistema desenvolvido sob medida para empresa de seguros automotivos.</h7>
-                              <br>
-                              <br>
-                              <a href="https://youtu.be/CGh7k40ut9M"><i class="ti-link"></i></a>
-                              <hr>
-                              <h7 style="color: rgb(42, 48, 2);" >Software desenvolvido em Ruby on Rails + SQLite + Docker.</h7>
-                              <h7 style="color: rgb(42, 48, 2);"><br><hr>Em produção utilizando Fly.io</h7>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img id="site2" src="assets/imgs/folio-3.png" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Suspentec.</h5>
-                                <h7>Software sob demanda para Suspentec Multimarcas.<br>
-                                Solução completa para controle de serviços, financeiro, e pós-venda.
-                                </h7>
-                                <br>
-                                <br>
-                                <a href="https://youtu.be/JzJfDykIZCk"><i class="ti-link"></i></a>
-                                <hr>
-                                <h7 style="color: rgb(42, 48, 2);" >Software desenvolvido em Ruby on Rails + PostgreSQL + Docker + Node.js em microsserviços.
-                                  <br><hr> Em produção utilizando Amazon AWS Ec2 + RDS.
-                                </h7>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End of portfolio section -->
-
-    <!-- Testmonial Section -->
-    <!-- End of testmonial section -->
-
-    <!-- Hire me section -->
-    <section class="bg-gray p-0 section">
+    <!-- About -->
+    <section id="about" class="section">
         <div class="container">
-            <a href="#"><img src="assets/imgs/sistema.png" alt="" height="100px"></a>
+            <div class="file-head reveal"><span class="hash">#</span><h2>about.md</h2><span class="path">Sobre mim</span></div>
+
+            <div class="about-grid reveal">
+                <div class="md-body">
+                    <p>Sou Engenheiro de Software com formação em Administração — o que me permite construir soluções técnicas alinhadas diretamente aos objetivos de negócio. Minha maior especialidade é o <strong>backend (Ruby on Rails &amp; Go)</strong>, mas tenho experiência prática liderando o desenvolvimento de produtos full-stack de ponta a ponta.</p>
+                    <p>Fui responsável pela arquitetura e implementação de sistemas críticos, como gateways de pagamento (Pix e crédito) e plataformas de e-commerce de alta escala. Otimizei performance com Redis — como cache para reduzir a carga no MongoDB e como fila de background jobs — e garanto qualidade e documentação de API com RSpec e Rswag.</p>
+                    <p>Minha atuação não se limita ao backend: já desenvolvi dashboards web em React e Next.js e apps mobile nativos em Kotlin e Swift, transitando entre times conforme a necessidade do produto. Inglês fluente e familiaridade com normas de Segurança (ISO 27001) e Qualidade (ISO 9001) me preparam para colaborar com equipes globais.</p>
+
+                    <div class="symbol-list">
+                        <span>rails</span><span>go</span><span>react</span><span>nextjs</span><span>kotlin</span><span>swift</span><span>mongodb</span><span>postgres</span><span>redis</span><span>docker</span><span>aws</span>
+                    </div>
+
+                    <a class="btn btn-ghost" style="margin-top:26px;" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/" target="_blank" rel="noopener">open linkedin.com/in/rodrigo</a>
+                </div>
+
+                <div class="about-photo-frame">
+                    <div class="tab">avatar.jpg</div>
+                    <img src="assets/imgs/avatar.jpg" alt="Rodrigo Bezerra">
+                </div>
+            </div>
         </div>
     </section>
-    <!-- End od Hire me section. -->
 
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
-                rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p> 12345 Fake ST NoWhere AB Country</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>(123) 456-7890</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>info@website.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="map">
-            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>
-    </section> -->
-    <!-- End of Contact Section -->
-
-    <!-- Page Footer -->
-    <footer class="page-footer">
+    <!-- Experience -->
+    <section id="experience" class="section alt">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <p>Copyright
-                        <script>document.write(new Date().getFullYear())</script> &copy; <a
-                            href="https://github.com/pes4delo" target="_blank">Rodrigo Bezerra</a>
-                    </p>
+            <div class="file-head reveal"><span class="hash">#</span><h2>experience.log</h2><span class="path">Appgas · 2024 — presente</span></div>
+            <p class="section-note reveal">Três anos de evolução contínua — do core do backend à liderança técnica multiplataforma.</p>
+
+            <div class="log reveal">
+                <div class="log-entry current">
+                    <div class="log-num">03</div>
+                    <div class="log-content">
+                        <div class="log-timestamp"><span class="live"></span>[2026-01 → atual] · 7 meses</div>
+                        <h3>Tech Lead | Senior Software Engineer</h3>
+                        <div class="company">Appgas · Alphaville, Híbrido</div>
+                        <p>Liderança técnica do time de engenharia: decisões de arquitetura, code review e evolução técnica do produto. Conduzi de ponta a ponta o desenvolvimento do e-commerce de gás da Consigaz. Foco diário em performance, segurança e redução de custos de um sistema de alta escala com milhões de requisições por minuto e uptime de 99,99%. Referência técnica cross-funcional entre backend (Ruby on Rails), frontend (React/Next.js) e mobile (Kotlin, Swift, React Native).</p>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="socials">
-                      
-                        <a class="social-item" href="https://www.instagram.com/rodrigosuco/"><i class="ti-instagram"></i></a>
-                        <a class="social-item" href="https://github.com/pes4delo"><i class="ti-github"></i></a>
-                        <a class="social-item" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/"><i class="ti-linkedin"></i></a>
-                    
+                <div class="log-entry">
+                    <div class="log-num">02</div>
+                    <div class="log-content">
+                        <div class="log-timestamp">[2025-06 → 2026-01] · 8 meses</div>
+                        <h3>Senior Full-Stack Software Engineer</h3>
+                        <div class="company">Appgas</div>
+                        <p>Evolução do papel de backend para atuação full-stack, assumindo ownership de iniciativas críticas do produto. Redesenhei a arquitetura do gateway de pagamento para suportar Pix, crédito e parcelado. Introduzi Redis como camada de cache e fila de jobs, reduzindo a pressão sobre o MongoDB e aumentando a resiliência sob carga. Contribuí com o app Android nativo (Kotlin), app iOS nativo (Swift) e o novo app do motorista em React Native.</p>
+                    </div>
+                </div>
+                <div class="log-entry">
+                    <div class="log-num">01</div>
+                    <div class="log-content">
+                        <div class="log-timestamp">[2024-08 → 2025-07] · 1 ano</div>
+                        <h3>Mid-Level Backend Software Engineer</h3>
+                        <div class="company">Appgas</div>
+                        <p>Atuação focada em backend (Ruby on Rails), construindo as fundações do que se tornaria o core do produto. Implementei as primeiras versões do gateway de pagamento e das dashboards administrativas, estabelecendo padrões de testes com RSpec e Rswag adotados pelo time.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="section">
+        <div class="container">
+            <div class="file-head reveal"><span class="hash">#</span><h2>stack.json</h2><span class="path">o que uso no dia a dia</span></div>
+
+            <div class="json-block reveal">
+                <div class="editor-bar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <span class="filename">stack.json</span>
+                </div>
+                <div class="json-inner">
+                    <span class="json-punc">{</span>
+
+                    <div class="json-group">
+                        <span class="json-key">"linguagens"</span><span class="json-punc">:</span>
+                        <div class="json-values">
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=ruby" alt="">Ruby</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=golang" alt="">Go</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=ts" alt="">TypeScript</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=kotlin" alt="">Kotlin</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=swift" alt="">Swift</span>
+                        </div>
+                    </div>
+
+                    <div class="json-group">
+                        <span class="json-key">"frameworks"</span><span class="json-punc">:</span>
+                        <div class="json-values">
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=rails" alt="">Rails</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=react" alt="">React</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=nextjs" alt="">Next.js</span>
+                        </div>
+                    </div>
+
+                    <div class="json-group">
+                        <span class="json-key">"dados"</span><span class="json-punc">:</span>
+                        <div class="json-values">
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=mongo" alt="">MongoDB</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=postgres" alt="">PostgreSQL</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=redis" alt="">Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="json-group">
+                        <span class="json-key">"infra"</span><span class="json-punc">:</span>
+                        <div class="json-values">
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=docker" alt="">Docker</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=aws" alt="">AWS</span>
+                            <span class="json-chip"><img src="https://skillicons.dev/icons?i=neovim" alt="">Neovim</span>
+                        </div>
+                    </div>
+
+                    <span class="json-punc">}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+        <div class="container">
+            <div class="file-head reveal"><span class="hash">#</span><h2>contact.sh</h2><span class="path">vamos conversar</span></div>
+
+            <div class="contact-panel reveal">
+                <div class="editor-bar">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    <span class="filename">contact.sh</span>
+                </div>
+                <div class="contact-inner">
+                    <p class="intro"><span class="cmt"># Tem um projeto ou uma vaga em mente? Escolha um comando abaixo.</span></p>
+
+                    <a class="command-row" href="https://api.whatsapp.com/send/?phone=5511954799830&text=Ol%C3%A1%2C+Rodrigo%21+Vim+pelo+seu+portf%C3%B3lio.&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+                        <span class="prompt-sym">$</span>
+                        <span class="cmd-text">./whatsapp.sh --chamar</span>
+                        <span class="go">run →</span>
+                    </a>
+                    <a class="command-row" href="mailto:rod1dev@proton.me">
+                        <span class="prompt-sym">$</span>
+                        <span class="cmd-text">mail rod1dev@proton.me</span>
+                        <span class="go">run →</span>
+                    </a>
+                    <a class="command-row" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/" target="_blank" rel="noopener">
+                        <span class="prompt-sym">$</span>
+                        <span class="cmd-text">open linkedin.com/in/rodrigo</span>
+                        <span class="go">run →</span>
+                    </a>
+
+                    <div class="contact-socials">
+                        <span class="label">$ ls ./redes</span>
+                        <div class="socials">
+                            <a class="social-item" href="https://github.com/rodrigosuco" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+                            </a>
+                            <a class="social-item" href="https://www.linkedin.com/in/rodrigo-bezerra-17833b229/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.48v6.26ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+                            </a>
+                            <a class="social-item" href="https://instagram.com/rodrigosuco" target="_blank" rel="noopener" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.9C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.3.79.72 1.47 1.39 2.13.66.67 1.34 1.08 2.13 1.39.76.3 1.63.5 2.9.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.9.06-1.29.07-1.7.07-4.96s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p># © <span id="year"></span> Rodrigo Bezerra — todos os direitos reservados</p>
+            <p class="prompt-end">rodrigo@dev:~$ <span class="caret" aria-hidden="true"></span></p>
         </div>
     </footer>
-    <!-- End of page footer -->
 
-    <!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- steller js -->
-    <script src="assets/js/steller.js"></script>
-
+    <script src="assets/js/portfolio.js"></script>
 </body>
 
 </html>
